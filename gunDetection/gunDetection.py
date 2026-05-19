@@ -13,7 +13,7 @@ gun_cascade = cv2.CascadeClassifier('cascade.xml')
 
 
 # Start webcam capture
-# '0' means the default webcam
+# '0' means the de+fault webcam
 
 camera = cv2.VideoCapture(0)
 
@@ -68,4 +68,4 @@ else:
     print("Guns didn't detected......")
 
 camera.release()
-cv2.destroyWindow()
+cv2.destroyAllWindows()
