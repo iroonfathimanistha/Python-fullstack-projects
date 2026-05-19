@@ -60,9 +60,50 @@ Python_projects/
 └── README.md
 ```
 
+# AI Content Detector
+
+A simple Python application that detects AI-generated content from uploaded PDF files.
+
+## Features
+
+* Upload PDF files
+* Extract text from PDFs
+* Detect AI-generated content
+* Display AI detection results
+* Simple and easy-to-use interface
+
+## Technologies Used
+
+* Python
+* Flask / Tkinter
+* PDF text extraction
+* AI content detection
+
+## Installation
+
+```bash
+git clone https://github.com/iroonfathimanistha/Python-fullstack-projects.git
+cd plagiarism-checker
+pip install -r requirements.txt
+```
+
+## Run the Project
+
+```bash
+python app.py
+```
+
+## Usage
+
+1. Upload a PDF file
+2. The system extracts the text
+3. AI-generated content is analyzed
+4. Detection results are displayed
+
 ## Author
 
-Created by Fathima Nistha.
+Developed by Fathima Nistha
+
 
 ## License
 
