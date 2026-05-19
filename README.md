@@ -60,7 +60,7 @@ Python_projects/
 └── README.md
 ```
 
-# AI Content Detector
+# 2. AI Content Detector
 
 A simple Python application that detects AI-generated content from uploaded PDF files.
 
