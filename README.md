@@ -90,7 +90,7 @@ pip install -r requirements.txt
 ## Run the Project
 
 ```bash
-python app.py
+python main.py
 ```
 
 ## Usage
