@@ -1,0 +1,14 @@
+
+Meeting Transcript (Simulated)
+==============================
+
+Attendees: John, Sarah, Mike
+
+John: We need to finish the login page by Friday.
+Sarah: I can help with the database design.
+Mike: Let's schedule a follow-up on Monday.
+
+Action items:
+- John: Create login page
+- Sarah: Design database schema
+- Mike: Send calendar invite

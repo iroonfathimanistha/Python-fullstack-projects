@@ -1,41 +1,34 @@
-# process_audio_stub.py
+# transcribe_meeting.py
 
+from app.whisper_service import transcribe_audio
 from app.utils import get_audio_file_path, save_transcript
 
 
 def main():
-    print("=== Meeting Summarizer (Day 2 Stub) ===\n")
+    print("=== Meeting Transcriber (Real Whisper) ===\n")
 
-    # 1. Locate audio file
+    # 1. Get audio file
     try:
         audio_path = get_audio_file_path()
-        print(f"✅ Audio file found: {audio_path}")
+        print(f"✅ Audio found: {audio_path}")
     except FileNotFoundError as e:
         print(f"❌ {e}")
         return
 
-    # 2. Simulate transcription (will be replaced by Whisper on Day 3)
-    dummy_transcript = """
-Meeting Transcript (Simulated)
-==============================
+    # 2. Transcribe
+    transcript = transcribe_audio(audio_path)
+    if not transcript:
+        print("❌ Could not transcribe. Exiting.")
+        return
 
-Attendees: John, Sarah, Mike
+    # 3. Save transcript
+    output_file = "meeting_transcript.txt"
+    saved = save_transcript(transcript, output_file)
+    print(f"\n📄 Full transcript saved to: {saved}")
 
-John: We need to finish the login page by Friday.
-Sarah: I can help with the database design.
-Mike: Let's schedule a follow-up on Monday.
-
-Action items:
-- John: Create login page
-- Sarah: Design database schema
-- Mike: Send calendar invite
-"""
-
-    # 3. Save the transcript
-    transcript_path = save_transcript(dummy_transcript, "meeting_transcript.txt")
-    print(f"\n📝 Transcript saved to: {transcript_path}")
-
-    print("\n✅ Day 2 complete! Ready for Day 3.")
+    # 4. Show statistics
+    word_count = len(transcript.split())
+    print(f"📊 Stats: {word_count} words, {len(transcript)} characters")
 
 
 if __name__ == "__main__":
