@@ -1,7 +1,0 @@
-# Windows
-echo venv/ > .gitignore
-echo __pycache__/ >> .gitignore
-echo *.pyc >> .gitignore
-echo .env >> .gitignore
-echo uploads/*.mp3 >> .gitignore
-echo transcripts/*.txt >> .gitignore
